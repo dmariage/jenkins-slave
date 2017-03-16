@@ -3,7 +3,7 @@ node('swarm') {
     docker_creds_id = "damien-dockerhub-crendentials" // name of the Jenkins Credentials ID
     build_tag = "testing" // default tag to push for to the registry
     gitRepositoryUrl = "https://github.com/dmariage/jenkins-slave.git"
-    imageName = "damienma/taiga"
+    imageName = "damienma/jenkins-slave"
     
     //git gitRepositoryUrl
     checkout scm
