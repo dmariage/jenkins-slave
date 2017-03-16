@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-MAINTAINER Bilal Sheikh <bilal@techtraits.com>
+MAINTAINER Damien MARIAGE <d.mariage@groupeonepoint.com.com>
 
 RUN apt-get update && apt-get -y upgrade && apt-get -y install software-properties-common && add-apt-repository ppa:webupd8team/java -y && apt-get update
 
