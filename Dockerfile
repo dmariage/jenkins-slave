@@ -18,7 +18,7 @@ ENV HOME /home/jenkins-slave
 ENV WORK_DIR /var/jenkins_slave_home
 
 
-RUN useradd -c "Jenkins Slave user" -d $HOME -m jenkins-slave
+RUN useradd -c "Jenkins Slave user" -d $HOME -m jenkins-slave && mkdir $WORK_DIR && chown -R jenkins-slave:jenkins-slave $WORK_DIR
 RUN curl --create-dirs -sSLo $HOME/swarm-client-$JENKINS_SWARM_VERSION.jar https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/$JENKINS_SWARM_VERSION/swarm-client-$JENKINS_SWARM_VERSION.jar
 ADD cmd.sh /cmd.sh
 
