@@ -1,7 +1,7 @@
-node('swarm') {
+node('build') {
     registry_url = "https://index.docker.io/v1/" // Docker Hub
     docker_creds_id = "damien-dockerhub-crendentials" // name of the Jenkins Credentials ID
-    build_tag = "3.3" // default tag to push for to the registry
+    build_tag = "3.3.1" // default tag to push for to the registry
     gitRepositoryUrl = "https://github.com/dmariage/jenkins-slave.git"
     imageName = "damienma/jenkins-slave"
     
@@ -14,11 +14,7 @@ node('swarm') {
             taigaImage = docker.build("${imageName}:${env.BUILD_TAG}", '.')
         }
         
-        stage('push') {
-            taigaImage.push()
-        }
-        
-        stage('push-latest') {
+        stage('push tag') {
             taigaImage.push(build_tag)
         }
         

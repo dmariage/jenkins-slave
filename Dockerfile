@@ -15,6 +15,7 @@ RUN apt-get update -qq && apt-get install -qqy wget curl git iptables ca-certifi
 
 ENV JENKINS_SWARM_VERSION 3.3
 ENV HOME /home/jenkins-slave
+ENV WORK_DIR /var/jenkins_slave_home
 
 
 RUN useradd -c "Jenkins Slave user" -d $HOME -m jenkins-slave
@@ -39,9 +40,13 @@ RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz \
   && chmod +x /usr/local/bin/rancher
 
 VOLUME /var/lib/docker
+VOLUME /var/jenkins_slave_home
 
 #ENV JENKINS_USERNAME jenkins
 #ENV JENKINS_PASSWORD jenkins
 #ENV JENKINS_MASTER http://jenkins:8080
+#ENV SLAVE_EXECUTORS [number of cpu cores]
+#ENV SLAVE_NAME swarm-client
+#ENV SLAVE_LABELS 
 
 CMD /bin/bash /cmd.sh

@@ -21,3 +21,11 @@ You can specify optional environment variables below when invoking docker run to
 | SLAVE_EXECUTORS | number of cpu cores | This value specifies the number of concurrent jobs this worker can process |
 | SLAVE_NAME      | swarm-client        | This value specifies the name of slave that will appear on Jenkins UI      |
 | SLAVE_LABELS    | None                | This value specifies the labels you want to give for the launching slave   |
+
+### Optional Volumes
+
+You can map the slave work directory to share or reuse working directory when other slaves run on same host or to retrieve existing FS when container restart
+
+| Volume                  | Description                                       |
+|-------------------------|---------------------------------------------------|
+| /var/jenkins_slave_home | slave work directory, the remote FS root          |

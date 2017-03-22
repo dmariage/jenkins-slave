@@ -29,4 +29,4 @@ else
   fi
 fi
 
-java -jar $JAR $PARAMS -fsroot $HOME
+java -jar $JAR $PARAMS -fsroot $WORK_DIR
