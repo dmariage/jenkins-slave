@@ -1,23 +1,19 @@
 sudo: required
-
 services:
   - docker
-
 env:
   global:
     - 'COMMIT=${TRAVIS_COMMIT::8}'
     - secure: >-
-        WnMu7FjbWEMf3FrOZnmXix6/p3KUw6bEzYxH6qkH0QaeI6O8GcYIQTy6Sz1dhqZYeNIywYVtu9Yn6A0Xgkdh5EeNVWGImhhTotayqBE0LAc44ecBRwlPpLtVrVkVAHB5uKoDkhxP2MjeGgDNo6Gzt+cUxLA0RZxI0n4/hwmMJiMvDPOfDFGcjop+YBb7nYjgQ0+xtmIYz+akFT5pTtSbk7WuHajhJo6uFHUwhMdiy1ms7qfz3lBqEOHwmUXZVWZHizhxyFACSRIUgK1bY4mK9/vFrem31AsR72QKn8jZaFEqDvtErsAYndKcWODqDEx6iUYx5dgY2p0ywAOEGsIcJux78TmFHaDJSVSM32sjZ2QUYRDUEqBuDypGva/u7AkcXD3DtoQcQKE5slPpWcWT27hWFHvfezIu9SpLDUO/xJaG13swceRSloevxChpyrdXEqWrbnbvzmDKLwiPtJF2ZQZRdtfZTvqB7AlTyDvd1baZaF6BigK6k+lQLqu4i4Ubq1Zwn5hivqeuz8doD65JOphH2JK1dk4vliTqkZxBTDZn4Mdxf3iXhEaai2i/HyxGLqrfnujv+dDxVh2ueUOyhbpQpF3Xu80HZIf+mGJHidz/x5sZ2HwW8SV02DcFtX3DoAgOHnz4tM+jXC11FrKOy1OD+azn8+fhukxheszZlP4=
+        M8vO2E7Bg0zHNFYZ6Skg7EkuXOtbHdQlbpcQtEiSCbYr80KU1iLG9ANseMyh9TGGdABxL1t3n2rw5QBZuA+unclrX4t9+Ribzykc0WF52BtatMGKK7aYHe+tcvlcVd94giL1Eq1ief2XXPE1C6jfWibP/B7y6KAl9SE69nz9F3D/AZzZ2fmKwg0i8YBX48PlLVw0F5OIdRSl10tSZRzExMMT+yMaPD8WmTEo5Zgru8vOzTDtWv+G4Lee7g/BKxELIaYr0S7FJi7akFHsZJusF+9+tMxThI7BtRHFX8xDjYMgwy5ra3sbPjDTFViDm29aIEbzmFb5Lxp31LUmp/o4/LZ6Gn/CdkwsJ15YRCuqbh+vu33Y0BqwaWtuDm8eixLo0GgibaRnOrMLsI1K74i5AQ8kqkAZRz9g8/+vedw2RHYXCBVb9meZ1OZBEoa9deJa7KuVaFvOPaTiEIQtjfLg6lg8pD40f43q8rka8uVz/ZyxHcVhjzKruFfJawOXQ99kmrVhKJTs3KWHNQ17FdZ1uf6pBY0f1QWIdu6TTq2xwJe1CqTj+/61p4praiV9G8C/6hi8YX+H7kV5VGEcZS/tYNVWgl5OoxLHKTT+ARHJflzpAKI8txExoi6EiqGm/TTxXJh7eNF5IFItSfOpOQr4TZAhrIMYR0klY6M1v0hpDCc=
     - secure: >-
-        HLgzYZ3uDX/F0JsmqwAxaVowpb5r4vHJYP/mNerHswaw4UOPmNnBChX5R0L9dDbPdCiC9ugzTtaHqJrEe9OYFiuKJDsgZvvPnCQjB51ZDdSmUXne5P+6V7ZWM13GQDI75tohPWRCWVOrDnSCOy/1jm75cw3zwX3I8hUbWqgt4NwsCba0+3W2A/tItmBa1Wk6Xc3d76LkzIl2YJsijEGU4FvvPN2Upn4JczvVr+oAspFaRXNV/FMimyVQaB973jCJnF2b3uTmN/8yAYZ5Vm2daQelSKIFIL0ivojci088lNhBZPAibh2/SzS36hsbaLMEwBUMQ7rYlBcRMfQejmvHDe/Fd+9Xm+n3Zd7qQOg/3K/suO1KO4RKCSDTFOGYb+AaI3+BSMoNPWS2cYqaxEs+49Q+JCiVdYgAULhmelLLTl7M5g1t+qA6jjtDdIgPTUMKe2Lo6jU4ZFpwNysc6E7u3uxQNE1iP7T7zu9NnAHc/AwteEQUNbRDWEmJRMjFq2noLY8Gdb8VTLQ4AJL6FpPpJ1MydqtOunzDLojx2yiMOv91Aab5ghe8oPmRFk+PwROkS7sJLu5x4eb/vpvPCKWu5w1KUpqIqxHnN2SA5n8Axm0tTWA8QNYyD/yppCTNkBl2xasI+frLHGYZnGMeI9mjR8IjyvYHkKz/Z8PSLesIunw=
-
+        Pw6bPVlD6lJ+pAPvxw2iT+xyCaury6BcztAn4yZ8UxdhjZ+Rx0TbfidIW0+hcoNV9JKX5YNdR2RT2+qh8AMJsQzQTXB49Q1FcvkqEctsN+bTlyTagt/xp2CuSZk6vqPtpCCaxhRKFPYX9lmEJi0A7yGSQLaBS8HIfGKEk/q4V6JOHSKZe3eXtV/PzoCKBQpmXLH8KnyLIm6TvZ7MzH3Xi5kLNVyTiknzzAMnJtMJtRYNM4nChVJEyZtQQy3DzpPt1aVokz9FT+j5k6K5USLwpZar1vVcqmXu256vQruIMp/xvpjTu0tpJH+1oYfLP582uReSYkSbHwqG0gs2ZLZWbOZUbu9WMlOb8wu+5EY/CDCtoJcb58juBa7q1Qawho8Acj95LvT2ZQ5fxyE8dZo4Xiqp2iipxYfrqadG1maxRWHwZ2kCeNL3CcMhPnKnQ0i+IRIht0+KzAM/ewIMUNUUfoaVYYJu3q5VZZyQGX9EYoKXJT10jn4GOmv3PHdl1X6mmbIcRctwKnOpJ/G0oOVO58O0Us448tlXbMyE528KB1MAEcdJb+JqMtr5Fl0ne3wQJGV+m1hfzZ/8bni2yPPif1vw8vyL4+QiVW5htbFEqv3Lvaml2bW5+/xR+MkxcnznrASl2/dXy6ncE4LO20C4rwsjf77dnQnXj/1FA0CDhoE=
 script:
   - export REPO=dmariage/jenkins-slave
   - >-
     export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else
     echo $TRAVIS_BRANCH ; fi`
   - 'docker build -f Dockerfile_ansible -t $REPO:$COMMIT .'
-
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=dmariage/jenkins-slave
