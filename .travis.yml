@@ -1,6 +1,8 @@
 sudo: required
+
 services:
   - docker
+
 env:
   global:
     - 'COMMIT=${TRAVIS_COMMIT::8}'
@@ -8,6 +10,7 @@ env:
         WnMu7FjbWEMf3FrOZnmXix6/p3KUw6bEzYxH6qkH0QaeI6O8GcYIQTy6Sz1dhqZYeNIywYVtu9Yn6A0Xgkdh5EeNVWGImhhTotayqBE0LAc44ecBRwlPpLtVrVkVAHB5uKoDkhxP2MjeGgDNo6Gzt+cUxLA0RZxI0n4/hwmMJiMvDPOfDFGcjop+YBb7nYjgQ0+xtmIYz+akFT5pTtSbk7WuHajhJo6uFHUwhMdiy1ms7qfz3lBqEOHwmUXZVWZHizhxyFACSRIUgK1bY4mK9/vFrem31AsR72QKn8jZaFEqDvtErsAYndKcWODqDEx6iUYx5dgY2p0ywAOEGsIcJux78TmFHaDJSVSM32sjZ2QUYRDUEqBuDypGva/u7AkcXD3DtoQcQKE5slPpWcWT27hWFHvfezIu9SpLDUO/xJaG13swceRSloevxChpyrdXEqWrbnbvzmDKLwiPtJF2ZQZRdtfZTvqB7AlTyDvd1baZaF6BigK6k+lQLqu4i4Ubq1Zwn5hivqeuz8doD65JOphH2JK1dk4vliTqkZxBTDZn4Mdxf3iXhEaai2i/HyxGLqrfnujv+dDxVh2ueUOyhbpQpF3Xu80HZIf+mGJHidz/x5sZ2HwW8SV02DcFtX3DoAgOHnz4tM+jXC11FrKOy1OD+azn8+fhukxheszZlP4=
     - secure: >-
         HLgzYZ3uDX/F0JsmqwAxaVowpb5r4vHJYP/mNerHswaw4UOPmNnBChX5R0L9dDbPdCiC9ugzTtaHqJrEe9OYFiuKJDsgZvvPnCQjB51ZDdSmUXne5P+6V7ZWM13GQDI75tohPWRCWVOrDnSCOy/1jm75cw3zwX3I8hUbWqgt4NwsCba0+3W2A/tItmBa1Wk6Xc3d76LkzIl2YJsijEGU4FvvPN2Upn4JczvVr+oAspFaRXNV/FMimyVQaB973jCJnF2b3uTmN/8yAYZ5Vm2daQelSKIFIL0ivojci088lNhBZPAibh2/SzS36hsbaLMEwBUMQ7rYlBcRMfQejmvHDe/Fd+9Xm+n3Zd7qQOg/3K/suO1KO4RKCSDTFOGYb+AaI3+BSMoNPWS2cYqaxEs+49Q+JCiVdYgAULhmelLLTl7M5g1t+qA6jjtDdIgPTUMKe2Lo6jU4ZFpwNysc6E7u3uxQNE1iP7T7zu9NnAHc/AwteEQUNbRDWEmJRMjFq2noLY8Gdb8VTLQ4AJL6FpPpJ1MydqtOunzDLojx2yiMOv91Aab5ghe8oPmRFk+PwROkS7sJLu5x4eb/vpvPCKWu5w1KUpqIqxHnN2SA5n8Axm0tTWA8QNYyD/yppCTNkBl2xasI+frLHGYZnGMeI9mjR8IjyvYHkKz/Z8PSLesIunw=
+
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=dmariage/jenkins-slave
