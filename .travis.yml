@@ -9,14 +9,14 @@ env:
     - secure: >-
         Pw6bPVlD6lJ+pAPvxw2iT+xyCaury6BcztAn4yZ8UxdhjZ+Rx0TbfidIW0+hcoNV9JKX5YNdR2RT2+qh8AMJsQzQTXB49Q1FcvkqEctsN+bTlyTagt/xp2CuSZk6vqPtpCCaxhRKFPYX9lmEJi0A7yGSQLaBS8HIfGKEk/q4V6JOHSKZe3eXtV/PzoCKBQpmXLH8KnyLIm6TvZ7MzH3Xi5kLNVyTiknzzAMnJtMJtRYNM4nChVJEyZtQQy3DzpPt1aVokz9FT+j5k6K5USLwpZar1vVcqmXu256vQruIMp/xvpjTu0tpJH+1oYfLP582uReSYkSbHwqG0gs2ZLZWbOZUbu9WMlOb8wu+5EY/CDCtoJcb58juBa7q1Qawho8Acj95LvT2ZQ5fxyE8dZo4Xiqp2iipxYfrqadG1maxRWHwZ2kCeNL3CcMhPnKnQ0i+IRIht0+KzAM/ewIMUNUUfoaVYYJu3q5VZZyQGX9EYoKXJT10jn4GOmv3PHdl1X6mmbIcRctwKnOpJ/G0oOVO58O0Us448tlXbMyE528KB1MAEcdJb+JqMtr5Fl0ne3wQJGV+m1hfzZ/8bni2yPPif1vw8vyL4+QiVW5htbFEqv3Lvaml2bW5+/xR+MkxcnznrASl2/dXy6ncE4LO20C4rwsjf77dnQnXj/1FA0CDhoE=
 script:
-  - export REPO=dmariage/jenkins-slave
+  - export REPO=$DOCKER_USER/jenkins-slave
   - >-
     export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else
     echo $TRAVIS_BRANCH ; fi`
   - 'docker build -f Dockerfile_ansible -t $REPO:$COMMIT .'
 after_success:
   - docker login docker.io -u $DOCKER_USER -p $DOCKER_PASS
-  - export REPO=dmariage/jenkins-slave
+  - export REPO=$DOCKER_USER/jenkins-slave
   - >-
     export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else
     echo $TRAVIS_BRANCH ; fi`
