@@ -15,7 +15,7 @@ script:
     echo $TRAVIS_BRANCH ; fi`
   - 'docker build -f Dockerfile_ansible -t $REPO:$COMMIT .'
 after_success:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login docker.io -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=dmariage/jenkins-slave
   - >-
     export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else
