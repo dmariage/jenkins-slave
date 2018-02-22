@@ -10,7 +10,7 @@ To run a Docker container customizing the different tools with your credentials
     -e JENKINS_USERNAME=jenkins \
     -e JENKINS_PASSWORD=jenkins \
     -e JENKINS_MASTER=http://jenkins:8080 \
-    rancher/jenkins-slave
+    damienma/jenkins-slave
 
 ### Optional Environment Variables
 

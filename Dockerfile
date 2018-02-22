@@ -13,7 +13,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 # apparmor is required to run docker server within docker container
 RUN apt-get update -qq && apt-get install -qqy wget curl git iptables ca-certificates apparmor
 
-ENV JENKINS_SWARM_VERSION 3.3
+ENV JENKINS_SWARM_VERSION 3.9
 ENV HOME /home/jenkins-slave
 ENV WORK_DIR /var/jenkins_slave_home
 
