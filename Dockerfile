@@ -25,7 +25,8 @@ ADD cmd.sh /cmd.sh
 # set our wrapper
 ENTRYPOINT ["/usr/local/bin/docker-wrapper"]
 
-# setup our local files first
+# setup our local files first`
+RUN groupadd -g 2016 docker
 ADD docker-wrapper.sh /usr/local/bin/docker-wrapper
 RUN chmod +x /usr/local/bin/docker-wrapper
 
