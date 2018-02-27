@@ -19,10 +19,7 @@ fi
 
 if [ ! -z "$SLAVE_LABELS" ]; then
   echo $SLAVE_LABELS > $HOME/slaveLabels
-  PARAMS="$PARAMS -labels '$SLAVE_LABELS'"
-fi
-if [ ! -z "$SLAVE_LABELS_FILE" ]; then
-  PARAMS="$PARAMS -labelsFile $SLAVE_LABELS_FILE"
+  PARAMS="$PARAMS -labelsFile $HOME/slaveLabels"
 fi
 
 if [ ! -z "$SLAVE_NAME" ]; then
