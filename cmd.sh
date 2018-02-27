@@ -23,10 +23,10 @@ fi
 if [ ! -z "$JENKINS_MASTER" ]; then
   PARAMS="$PARAMS -master $JENKINS_MASTER"
 else
-  if [ ! -z "$JENKINS_SERVICE_PORT" ]; then
+  if [ ! -z "$JENKINS_SLAVE_MODE" ]; then
     # kubernetes environment variable
-    PARAMS="$PARAMS -master http://$SERVICE_HOST:$JENKINS_SERVICE_PORT"
+    PARAMS="$PARAMS -mode $JENKINS_SLAVE_MODE"
   fi
 fi
 
-java $JAVA_OPTS -jar $JAR $PARAMS -fsroot $WORK_DIR
+java $JAVA_OPTS -jar $JAR $PARAMS -fsroot $WORK_DIR -showHostName $JENKINS_SLAVE_OTHER_PARAMS

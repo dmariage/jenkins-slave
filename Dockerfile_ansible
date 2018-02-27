@@ -44,5 +44,6 @@ VOLUME /var/jenkins_slave_home
 #ENV SLAVE_EXECUTORS [number of cpu cores]
 #ENV SLAVE_NAME swarm-client
 #ENV SLAVE_LABELS 
+#ENV JENKINS_SLAVE_MODE 
 
 CMD /bin/bash /cmd.sh
