@@ -1,3 +1,6 @@
+notifications:
+  email:
+    - d.mariage@gmail.com
 sudo: required
 services:
   - docker
